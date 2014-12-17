@@ -1,6 +1,6 @@
 {
   "name": "mobi.ui.model",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/loet/mobi.ui.model",
   "authors": [
     "U110730 <ueli.loetscher@mobi.ch>"
@@ -11,7 +11,7 @@
   "devDependencies": {
     "angular": "1.2.21",
     "angular-mocks": "1.2.21",
-    "mobi.ui.date": "https://github.com/loet/mobi.ui.date.git#0.0.2",
+    "mobi.ui.date": "https://github.com/loet/mobi.ui.date.git#0.0.3",
     "mobi.ui.guid": "https://github.com/loet/mobi.ui.guid.git#0.0.1",
     "angular-uuid": "~0.1.0"
   }

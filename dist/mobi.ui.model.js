@@ -52,7 +52,7 @@ angular.module('mobi.ui.model.services', [])
      *
      * @constructor
      */
-    function ModelManager($rootScope, $location, GUIDService, CONTEXT_TYPES, $log, DateService, _) {
+    function ModelManager($rootScope, $location, GUIDService, CONTEXT_TYPES, $log, DateFactory, _) {
         var modelsUpdateInterceptors = [];
 
         /**
@@ -180,7 +180,7 @@ angular.module('mobi.ui.model.services', [])
                 $rootScope.currentModel.correlationId = GUIDService.createGuid();
             }
 
-            timestamp = DateService.timestamp();
+            timestamp = DateFactory.timestamp();
             $rootScope.currentModel.timestamp = timestamp;
             $rootScope.currentModel.created = timestamp;
             $rootScope.currentModel.settings = {};
@@ -217,7 +217,7 @@ angular.module('mobi.ui.model.services', [])
             if (model) {
                 $rootScope.currentModel = model;
                 //update timestamp of newly selected
-                $rootScope.currentModel.timestamp = DateService.timestamp();
+                $rootScope.currentModel.timestamp = DateFactory.timestamp();
                 storeCurrentModel($rootScope.currentModel);
                 updateAllModels();
             }
